@@ -33,6 +33,8 @@ Plugin 'doums/darcula'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
+Plugin 'ananagame/vimsence'
+
 if iCanHazVundle == 0
   echo "Installing Bundles, please ignore key map error messages"
   echo ""
