@@ -30,6 +30,13 @@ Plugin 'scrooloose/syntastic'
 " Colorscheme
 Plugin 'doums/darcula'
 
+" Indent Guides
+" A Vim plugin for visually displaying indent levels in code
+Plugin 'nathanaelkane/vim-indent-guides'
+
+" Emmet — the essential toolkit for web-developers
+Plugin 'mattn/emmet-vim'
+
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
@@ -79,7 +86,6 @@ let g:airline_solarized_bg='dark'
 " If more than one window and previous buffer was NERDTree, go back to it.
 autocmd BufEnter * if bufname('#') =~# "^NERD_tree_" && winnr('$') > 1 | b# | endif
 
-
 " syntastic
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -93,9 +99,18 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_java_checkers=['javac']
 let g:syntastic_java_javac_config_file_enabled = 1
 
+" Indent Guides
+set ts=2 sw=2 et
+let g:indent_guides_enable_on_vim_startup = 1
+
 " YCM
 let g:syntastic_java_checkers = []
 let g:ycm_auto_trigger = 1
+
+" emmet
+let g:user_emmet_install_global = 0
+autocmd FileType html,css EmmetInstall
+
 
 " color
 set t_Co=256
