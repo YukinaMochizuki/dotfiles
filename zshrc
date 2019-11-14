@@ -105,3 +105,5 @@ source $ZSH/oh-my-zsh.sh
 
 export LC_ALL=en_US.UTF-8
 export LANGUAGE=en_US.UTF-8
+
+source /etc/profile.d/gradle.sh
