@@ -27,6 +27,16 @@ Plugin 'Xuyuanp/nerdtree-git-plugin'
 " Syntax checking hacks for vim
 Plugin 'scrooloose/syntastic'
 
+" UltiSnips - The ultimate snippet solution for Vim.
+" Track the engine.
+Plugin 'SirVer/ultisnips'
+
+" Snippets are separated from the engine. Add this if you want them:
+Plugin 'honza/vim-snippets'
+
+" Comment functions so powerful—no comment necessary.
+Plugin 'scrooloose/nerdcommenter'
+
 " Colorscheme
 Plugin 'doums/darcula'
 
