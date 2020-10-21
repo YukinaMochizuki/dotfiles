@@ -123,11 +123,16 @@ let g:ycm_auto_trigger = 1
 let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
 
-
 " color
 set t_Co=256
 set background=dark
 syntax on
 colorscheme darcula
 
+" Trigger configuration. You need to change this to something else than <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<C-j>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
