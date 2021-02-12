@@ -10,5 +10,6 @@
     ~/.zshrc: zshrc
 
 - create:
-    - ~/Documents/Project
-    - ~/Documents/Test
+    - ~/Documents/
+    - ~/Project/work
+    - ~/Project/personal
