@@ -5,11 +5,10 @@
 - clean: ['~']
 
 - link:
-    ~/.tmux.conf: tmux.conf
-    ~/.vimrc: vimrc
-    ~/.zshrc: zshrc
+    ~/.vimrc: service/vimrc
+    ~/.zshrc: service/zshrc
 
 - create:
-    - ~/Documents/
     - ~/Project/work
     - ~/Project/personal
+    - ~/Documents

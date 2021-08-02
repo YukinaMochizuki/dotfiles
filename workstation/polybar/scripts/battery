@@ -1,0 +1,7 @@
+#!/bin/bash
+
+real_charge=`awk 'BEGIN{printf "%.2f%%\n",('$(</sys/class/power_supply/BAT0/charge_now)'/'$(</sys/class/power_supply/BAT0/charge_full_design)')*100}'`
+
+battery_status=$(</sys/class/power_supply/BAT0/status)
+
+echo " $battery_status $real_charge "

@@ -1,0 +1,35 @@
+#!/bin/bash
+
+# Launch Rofi
+MENU="$(rofi -no-lazy-grab -sep "|" -dmenu -i -p 'Assistant:' \
+-hide-scrollbar true \
+-bw 0 \
+-lines 4 \
+-line-padding 10 \
+-padding 20 \
+-width 15 \
+-xoffset 27 -yoffset 60 \
+-location 1\
+-columns 1 \
+-show-icons -icon-theme "Papirus" \
+-font "Fantasque Sans Mono 10" \
+-color-enabled true \
+-color-window "$BACKGROUND,$BORDER,$SEPARATOR" \
+-color-normal "$BACKGROUND_ALT,$FOREGROUND,$BACKGROUND_ALT,$HIGHLIGHT_BACKGROUND,$HIGHLIGHT_FOREGROUND" \
+-color-active "$BACKGROUND,$MAGENTA,$BACKGROUND_ALT,$HIGHLIGHT_BACKGROUND,$HIGHLIGHT_FOREGROUND" \
+-color-urgent "$BACKGROUND,$YELLOW,$BACKGROUND_ALT,$HIGHLIGHT_BACKGROUND,$HIGHLIGHT_FOREGROUND" \
+<<< "  Traffic|  Taskwarrior|  Calender|  System")"
+case "$MENU" in
+  *Traffic) ~/.config/polybar/scripts/assistant/traffic;;
+  *Taskwarrior) ~/.config/polybar/scripts/backup/menu;;
+  *Calender) ~/.config/polybar/scripts/assistant/calender;;
+esac
+
+# More Options
+# -fullscreen \
+
+# Theming help
+# color window = background, border, separator
+# color normal = background, foreground, background-alt, highlight-background, highlight-foreground
+# color active = background, foreground, background-alt, highlight-background, highlight-foreground
+# color urgent = background, foreground, background-alt, highlight-background, highlight-foreground

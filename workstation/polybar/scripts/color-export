@@ -1,0 +1,36 @@
+#!/bin/bash
+
+# Custom Rofi Script
+export BORDER="#1F1F1F"
+export SEPARATOR="#1F1F1F"
+export FOREGROUND="#A9ABB0"
+export BACKGROUND="#1F1F1F"
+export BACKGROUND_ALT="#252525"
+export HIGHLIGHT_BACKGROUND="#004D40"
+export HIGHLIGHT_FOREGROUND="#FFFFFF"
+
+export BLACK="#000000"
+export WHITE="#ffffff"
+export RED="#e53935"
+export GREEN="#43a047"
+export YELLOW="#fdd835"
+export BLUE="#1e88e5"
+export MAGENTA="#00897b"
+export CYAN="#00acc1"
+export PINK="#d81b60"
+export PURPLE="#8e24aa"
+export INDIGO="#3949ab"
+export TEAL="#00897b"
+export LIME="#c0ca33"
+export AMBER="#ffb300"
+export ORANGE="#fb8c00"
+export BROWN="#6d4c41"
+export GREY="#757575"
+export BLUE_GREY="#546e7a"
+export DEEP_PURPLE="#5e35b1"
+export DEEP_ORANGE="#f4511e"
+export LIGHT_BLUE="#039be5"
+export LIGHT_GREEN="#7cb342"
+
+
+$@
