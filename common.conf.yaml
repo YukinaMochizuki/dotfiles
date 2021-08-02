@@ -5,3 +5,5 @@
 - link:
     ~/.tmux.conf: common/tmux.conf
 
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]
