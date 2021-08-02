@@ -18,9 +18,9 @@ MENU="$(rofi -no-lazy-grab -sep "|" -dmenu -i -p 'Assistant:' \
 -color-normal "$BACKGROUND_ALT,$FOREGROUND,$BACKGROUND_ALT,$HIGHLIGHT_BACKGROUND,$HIGHLIGHT_FOREGROUND" \
 -color-active "$BACKGROUND,$MAGENTA,$BACKGROUND_ALT,$HIGHLIGHT_BACKGROUND,$HIGHLIGHT_FOREGROUND" \
 -color-urgent "$BACKGROUND,$YELLOW,$BACKGROUND_ALT,$HIGHLIGHT_BACKGROUND,$HIGHLIGHT_FOREGROUND" \
-<<< "  Connect Service")"
+<<< "  Connect to Service")"
 case "$MENU" in
-  *"Connect Service") ~/.config/polybar/scripts/assistant/connect-service-menu;;
+  *"Connect to Service") ~/.config/polybar/scripts/assistant/connect-service-menu;;
 esac
 
 # More Options
