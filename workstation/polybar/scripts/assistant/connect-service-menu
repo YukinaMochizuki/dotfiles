@@ -18,11 +18,9 @@ MENU="$(rofi -no-lazy-grab -sep "|" -dmenu -i -p 'Assistant:' \
 -color-normal "$BACKGROUND_ALT,$FOREGROUND,$BACKGROUND_ALT,$HIGHLIGHT_BACKGROUND,$HIGHLIGHT_FOREGROUND" \
 -color-active "$BACKGROUND,$MAGENTA,$BACKGROUND_ALT,$HIGHLIGHT_BACKGROUND,$HIGHLIGHT_FOREGROUND" \
 -color-urgent "$BACKGROUND,$YELLOW,$BACKGROUND_ALT,$HIGHLIGHT_BACKGROUND,$HIGHLIGHT_FOREGROUND" \
-<<< "  Traffic|  Taskwarrior|  Calender|  System")"
+<<< "  GitLab")"
 case "$MENU" in
-  *Traffic) ~/.config/polybar/scripts/assistant/traffic;;
-  *Taskwarrior) ~/.config/polybar/scripts/backup/menu;;
-  *Calender) ~/.config/polybar/scripts/assistant/calender;;
+  *"GitLab") ~/Project/personal/private/workspace/script/connect-to-gitlab.sh;;
 esac
 
 # More Options
