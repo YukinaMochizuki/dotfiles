@@ -46,8 +46,9 @@ URxvt.preeditType: OerTheSpot
 !! URxvt.font:xft:Noto Sans Mono CJK TC pro:sans:size=7.5
 !! URxvt.font:     xft:bitstream vera sans mono:size=9:antialias=true
 !! URxvt.boldFont: xft:bitstream vera sans mono:bold:size=9:antialias=true
-!! URxvt*font:xft:BitstreamVeraSansMono Nerd Font Mono:pixelsize=15,xft:Noto Sans Mono CJK TC:pixelsize=15
-URxvt*font:xft:Fantasque Sans Mono:pixelsize=15:minspace=False,xft:Iosevka,xft:Noto Sans Mono CJK TC:minspace=False
+!! URxvt_font : --dejavu sans mono-----------iso8859-
+URxvt*font:xft:BitstreamVeraSansMono Nerd Font Mono:pixelsize=15,xft:Noto Sans Mono CJK TC:pixelsize=15
+!! URxvt*font:xft:Fantasque Sans Mono:pixelsize=15:minspace=False,xft:Iosevka,xft:Noto Sans Mono CJK TC:minspace=False
 
 URxvt*letterSpace:      -1
 URxvt*skipBuiltinGlyphs:  true
