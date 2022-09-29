@@ -5,8 +5,6 @@
 - clean: ['~']
 
 - link:
-    ~/.vimrc: workstation/vimrc
-    ~/.zshrc: workstation/zshrc
     ~/.Xresources: workstation/Xresources
     ~/.config/i3: workstation/i3
     ~/.config/polybar: workstation/polybar
@@ -16,9 +14,7 @@
     ~/.notion-enhancer: workstation/notion
 
 - create:
-    - ~/Project/work
-    - ~/Project/personal
     - ~/Documents
     - ~/Pictures
     - ~/Downloads
-    - ~/Share
+    - ~/Shares
