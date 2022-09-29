@@ -117,3 +117,7 @@ export NVM_DIR="$HOME/.nvm"
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/mochizuki/.sdkman"
 [[ -s "/home/mochizuki/.sdkman/bin/sdkman-init.sh" ]] && source "/home/mochizuki/.sdkman/bin/sdkman-init.sh"
+
+if [ -f ~/.aliases ]; then
+  source ~/.aliases
+fi

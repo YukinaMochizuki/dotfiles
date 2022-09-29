@@ -1,0 +1,30 @@
+########
+# Core #
+########
+
+alias mkdir='mkdir -p'
+alias grep='grep --color=always'
+alias ls='ls --color=always'
+alias l='ls -lh'         # Lists human readable sizes.
+alias ll='l -A'          # Lists human readable sizes, hidden files.
+alias lr='l -R'          # Lists human readable sizes, recursively.
+alias lt='l -tr'         # Lists sorted by date, most recent last.
+
+alias vim="nvim"
+
+# Easier navigation: .., ..., ...., ....., ~ and -
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias ~="cd ~" # `cd` is probably faster to type though
+alias -- -="cd -"
+
+# Stopwatch
+alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date'
+
+# untar
+alias untar='tar xvf'
+
+# Pipe my public key to my clipboard.
+alias pubkey="more ~/.ssh/id_rsa.pub | xclip -selection clipboard | echo '=> Public key copied to pasteboard.'"
