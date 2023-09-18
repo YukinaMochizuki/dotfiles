@@ -1,3 +1,4 @@
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -105,6 +106,22 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+alias vim=nvim
+alias ls=lsd
+
+function sha() {
+    eval $(ssh-agent)
+    ssh-add
+}
+
+# Tools command
+
+alias ds="sudo systemctl start docker"
+alias cs="sudo systemctl start containerd"
+alias ws="sudo systemctl start wg-quick@wg0"
+alias wstop="sudo systemctl stop wg-quick@wg0"
+alias wre="sudo systemctl restart wg-quick@wg0"
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
@@ -117,3 +134,15 @@ export NVM_DIR="$HOME/.nvm"
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/mochizuki/.sdkman"
 [[ -s "/home/mochizuki/.sdkman/bin/sdkman-init.sh" ]] && source "/home/mochizuki/.sdkman/bin/sdkman-init.sh"
+
+# pnpm
+export PNPM_HOME="/home/mochizuki/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
+eval "$(zoxide init zsh)"
+
+clear

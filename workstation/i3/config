@@ -162,6 +162,15 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 bindsym $mod+y exec "playerctl play-pause"
 bindsym $mod+n exec "playerctl next"
 bindsym $mod+p exec "playerctl previous"
+
+# Polybar
+bindsym $mod+o exec "polybar-msg cmd toggle"
+
+# Translation
+bindsym $mod+t exec "urxvt -e sh -c 'i3-msg floating enable > /dev/zero;echo Enter trans text:;trans :zh-TW -sp'"
+
+# Bc
+bindsym $mod+b exec "urxvt -e sh -c 'i3-msg floating enable > /dev/zero;bc'"
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
 # bindsym $mod+Return exec konsole
@@ -220,7 +229,7 @@ smart_borders on
 #        bindsym minus gaps outer current minus 5
 #        bindsym 0     gaps outer current set 0
 
-bindsym $mod+o exec "~/Project/blurlock-neofetch/blurlock -t real -c 'neofetch --w3m ~/Wallpaper/lock-icon/129771.jpg'"
+# bindsym $mod+o exec "~/Project/blurlock-neofetch/blurlock -t real -c 'neofetch --w3m ~/Wallpaper/lock-icon/129771.jpg'"
  
 
 # start ibus
@@ -232,6 +241,8 @@ exec --no-startup-id picom -b
 # start polybar
 exec --no-startup-id ~/.config/polybar/launch.sh
 
+exec --no-startup-id dunst
+exec --no-startup-id /usr/lib/xfce-polkit/xfce-polkit
 # backgroud
-exec feh --bg-scale ~/Pictures/Roxy-Migurdia-Wallpaper-2.jpg
+exec feh --bg-fill /home/mochizuki/dotfiles/wallpaper/wallpaper01.jpg
 # exec --no-startup-id bing-wallpaper -market en-US -picopts zoom

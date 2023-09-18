@@ -3,8 +3,21 @@
 count=0
 disconnected="睊"
 wireless_connected="直"
-ethernet_connected="泌"
+ethernet_connected=""
 
 ID="$(ip link | awk '/state UP/ {print $2}')"
 
-echo "$ethernet_connected" ; sleep 25
+if ping -q -c 1 8.8.8.8 >/dev/null 2>&1; then
+        if ip link show enp0s13f0u2u4 >/dev/null 2>&1; then
+                echo "| $ethernet_connected $(ip addr show enp0s13f0u2u4 | grep -oP '(?<=inet\s)\d+\.\d+\.\d+\.\d+') "
+        else
+                if [[ $(nmcli -t -f DEVICE,STATE dev | grep "^wlp0s20f3:") == "wlp0s20f3:connected" ]]; then
+                        ssid=$(nmcli -t -f NAME con show --active | head -n 1)
+                        echo "| $wireless_connected $ssid "
+                else
+                        echo "| $disconnected "
+                fi
+        fi
+else
+        echo "| $disconnected "
+fi
