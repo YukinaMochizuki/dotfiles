@@ -104,6 +104,8 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias vim="nvim"
+alias ls="lsd"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -121,3 +123,4 @@ export SDKMAN_DIR="/home/mochizuki/.sdkman"
 if [ -f ~/.aliases ]; then
   source ~/.aliases
 fi
+

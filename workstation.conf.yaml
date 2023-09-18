@@ -12,8 +12,11 @@
     ~/.config/rofi: workstation/rofi
     # Application
     ~/.notion-enhancer: workstation/notion
+    ~/.scripts: workstation/scripts
 
 - create:
+    - ~/Projects/work
+    - ~/Projects/personal
     - ~/Documents
     - ~/Pictures
     - ~/Downloads
