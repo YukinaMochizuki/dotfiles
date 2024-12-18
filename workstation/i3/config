@@ -158,6 +158,10 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
+# Sreen brightness controls
+bindsym XF86MonBrightnessUp exec light -A 10% # increase screen brightness
+bindsym XF86MonBrightnessDown exec light -U 10% # decrease screen brightness
+
 # Music keybind
 bindsym $mod+y exec "playerctl play-pause"
 bindsym $mod+n exec "playerctl next"
@@ -168,15 +172,31 @@ bindsym $mod+o exec "polybar-msg cmd toggle"
 
 # Translation
 bindsym $mod+t exec "urxvt -e sh -c 'i3-msg floating enable > /dev/zero;echo Enter trans text:;trans :zh-TW -sp'"
+bindsym $mod+g exec "urxvt -e sh -c 'i3-msg floating enable > /dev/zero;echo Enter trans text:;trans :en'"
 
-# Bc
+# bc
 bindsym $mod+b exec "urxvt -e sh -c 'i3-msg floating enable > /dev/zero;bc'"
+
+# timer
+bindsym $mod+i exec "urxvt -e sh -c 'i3-msg floating enable > /dev/zero;~/Private/bin/timer.sh'"
+
+# task
+bindsym $mod+c exec --no-startup-id urxvt -name task_annotations -hold -e ~/Private/bin/task_annotations.sh
+
+for_window [instance="task_annotations"] floating enable
+for_window [instance="task_annotations"] border pixel 1
+for_window [instance="task_annotations"] sticky enable
+for_window [instance="task_annotations"] resize set 400 200
+for_window [instance="task_annotations"] move position 10px 10px
+for_window [instance="task_annotations"] opacity 0.9
+
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
 # bindsym $mod+Return exec konsole
+bindsym $mod+Shift+Return exec "urxvt -e sh -c 'i3-msg floating enable > /dev/zero;zsh'"
 
 # start rofi (a program launcher)
-bindsym $mod+d exec "rofi -modi window,drun,ssh -show drun -sidebar-mode -terminal termite"
+bindsym $mod+d exec "/home/mochizuki/.config/rofi/launchers/type-7/launcher.sh"
 
 #############################
 ### settings for i3-gaps: ###
@@ -229,7 +249,7 @@ smart_borders on
 #        bindsym minus gaps outer current minus 5
 #        bindsym 0     gaps outer current set 0
 
-# bindsym $mod+o exec "~/Project/blurlock-neofetch/blurlock -t real -c 'neofetch --w3m ~/Wallpaper/lock-icon/129771.jpg'"
+bindsym $mod+Shift+o exec "~/Projects/personal/blurlock-neofetch/blurlock -c 'neofetch --w3m /home/mochizuki/Pictures/Wallpaper/lock-icon/129771.jpg'"
  
 
 # start ibus
@@ -242,7 +262,9 @@ exec --no-startup-id picom -b
 exec --no-startup-id ~/.config/polybar/launch.sh
 
 exec --no-startup-id dunst
-exec --no-startup-id /usr/lib/xfce-polkit/xfce-polkit
+
 # backgroud
-exec feh --bg-fill /home/mochizuki/dotfiles/wallpaper/wallpaper01.jpg
+exec feh --bg-fill /home/mochizuki/dotfiles/wallpaper/wallpaper02.jpg
 # exec --no-startup-id bing-wallpaper -market en-US -picopts zoom
+
+for_window [instance="clockify"] floating enable
